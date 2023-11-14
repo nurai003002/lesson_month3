@@ -1,0 +1,5 @@
+venv/
+config.py
+_pycache_/
+ojak_kebap.db
+video/
