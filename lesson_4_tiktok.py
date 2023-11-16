@@ -35,10 +35,6 @@
 
 
 # дз 
-
-
-
-
 import requests , os
 from config import token
 from aiogram import Bot,Dispatcher,types,executor
