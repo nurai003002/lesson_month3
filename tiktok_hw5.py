@@ -1,9 +1,8 @@
-
 from aiogram import Bot, Dispatcher, types, executor
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from logging import basicConfig, INFO
 from config import token
-import os, requests, re
+import  requests, re
 
 
 bot = Bot(token=token)
@@ -13,7 +12,7 @@ basicConfig(level=INFO)
 
 @dp.message_handler(commands='start')
 async def start(message:types.Message):
-    await message.answer(f"Привет {message.from_user.full_name}")
+    await message.answer(f"Привет {message.from_user.full_name}\nотправьте ссылку видео которое хотите скачать")
 
 @dp.message_handler()
 async def get_message_url(message:types.Message):

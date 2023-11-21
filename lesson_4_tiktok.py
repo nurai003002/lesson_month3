@@ -35,7 +35,7 @@
 
 
 # дз 
-import requests , os
+import requests 
 from config import token
 from aiogram import Bot,Dispatcher,types,executor
 import random
@@ -96,3 +96,5 @@ async def dowload_send_video(message:types.Message):
      
 
 executor.start_polling(dp)
+
+
