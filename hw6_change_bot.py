@@ -59,14 +59,14 @@ async def usd(message: types.Message, state: FSMContext):
         try:
             money = float(money)
             result = money * usd
-            await message.answer(f"Результат - KRG-USD: {result}")
+            await message.answer(f"Результат - USD-KRG: {result}")
         except ValueError:
             await message.answer("Введено некорректное значение денег")
     else:
         await message.answer("Не удалось получить значение денег")
 
     await state.finish()
-###################################3
+###################################
 
 @dp.callback_query_handler(lambda call: call.data == "eur")
 async def eur_current(call: types.CallbackQuery, state: FSMContext):
@@ -87,7 +87,7 @@ async def eur(message: types.Message, state: FSMContext):
         try:
             money = float(money)
             result = money * eur
-            await message.answer(f"Результат - KRG-EURO: {result}")
+            await message.answer(f"Результат - EURO-KRG: {result}")
         except ValueError:
             await message.answer("Введено некорректное значение денег")
     else:
@@ -95,7 +95,7 @@ async def eur(message: types.Message, state: FSMContext):
 
     await state.finish()
 
-# ##########################3
+# ##########################
 
 
 @dp.callback_query_handler(lambda call: call.data == "rub")
@@ -146,7 +146,7 @@ async def kzt(message: types.Message, state: FSMContext):
         try:
             money = float(money)
             result = money * kzt
-            await message.answer(f"Резальтат - KRG-KZT: {result}")
+            await message.answer(f"Резальтат - KZT-KRG: {result}")
         except ValueError:
             await message.answer("Введено некорректное значение денег")
     else:

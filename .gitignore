@@ -3,5 +3,5 @@ config.py
 _pycache_/
 ojak_kebap.db
 video/
-result.html
-requirements.txt
+result.html/
+requirements.txt/
