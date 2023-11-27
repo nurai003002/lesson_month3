@@ -16,14 +16,13 @@ connect = sqlite3.connect("bank_customs.db",check_same_thread=False)
 cursor = connect.cursor()
 
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS users (
+    CREATE TABLE IF NOT EXISTS users(
         user_id INTEGER PRIMARY KEY,
         username TEXT,
         lastname TEXT,
         phone_number VARCHAR (100)
         
-    );
-""")
+);""")
 cursor.execute(""" CREATE TABLE IF NOT EXISTS user_info(
                user_id INTEGER PRIMARY KEY,
                username  VARCHAR (150),
@@ -42,8 +41,7 @@ cursor.execute("""
         amount REAL,
         FOREIGN KEY(sender_id) REFERENCES users(user_id),
         FOREIGN KEY(recipient_id) REFERENCES users(user_id)
-    );
-""")
+);""")
 connect.commit()
 
 
